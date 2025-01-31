@@ -19,15 +19,17 @@ const NavButton = ({ icon: Icon, label, href }: Props) => {
       className="rounded-full"
       asChild
     >
-      <ShouldRender if={href}>
-        <Link href={href}>
-          <Icon />
-        </Link>
-      </ShouldRender>
+      <>
+        <ShouldRender if={href}>
+          <Link href={href}>
+            <Icon />
+          </Link>
+        </ShouldRender>
 
-      <ShouldRender if={!href}>
-        <Icon />
-      </ShouldRender>
+        <ShouldRender if={!href}>
+          <Icon />
+        </ShouldRender>
+      </>
     </Button>
   );
 };
